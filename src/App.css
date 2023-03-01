@@ -669,21 +669,36 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .project {
+  align-items: left;
   padding: 80px 0;
   position: relative;
   background-image: url('./assets/img/space.png');
 }
 [data-theme="light"] .project {
+  align-items: left;
+
   padding: 80px 0;
   position: relative;
   background-image: url('./assets/img/morning.png');
 }
 .project h2 {
+  text-shadow:
+  0 0 42px #0fa,
+  0 0 82px #0fa,
+  0 0 92px #0fa,
+  0 0 102px #0fa,
+  0 0 151px #0fa;
 	font-size: 45px;
 	font-weight: 700;
   text-align: center;
 }
 .project p {
+  text-shadow:
+  0 0 42px #0fa,
+  0 0 82px #0fa,
+  0 0 92px #0fa,
+  0 0 102px #0fa,
+  0 0 151px #0fa;
   color: #B8B8B8;
   font-size: 18px;
   letter-spacing: 0.8px;
@@ -698,11 +713,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 50px;
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
+  align-items: left;
 }
 .project .nav.nav-pills .nav-item {
+  float: left;
+  clear: left;
   width: 33.33333%;
 }
 .project .nav.nav-pills .nav-link {
+  float: left;
+  clear: left;
   background-color: transparent;
   border-radius: 0;
   padding: 17px 0;
@@ -734,6 +754,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     border: 1px solid rgba(255, 255, 255, 1);
 }
 .nav-link#projects-tabs-tab-first {
+  size: 100px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 55px 0px 0px 55px;
 }
@@ -746,17 +767,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 0 55px 55px 0;
 }
 .proj-imgbx {
+  size: 100px;
   position: relative;
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
 }
 .proj-imgbx::before {
+  size: 100px;
   content: "";
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   opacity: 0.85;
   position: absolute;
-  width: 100%;
+  width: 10%;
   height: 0;
   transition: 0.4s ease-in-out;
 }
@@ -790,7 +813,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
 }
 .background-image-right {
-  top: 20%;
+  top: 30%;
   position: absolute;
   bottom: 0;
   width: 35%;
@@ -798,7 +821,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/************ Contacts Css ************/
 .contact {
   background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
   padding: 60px 0 200px 0;

@@ -51,36 +51,20 @@ export const NavBar = () => {
                 // onClick = check if the title is clicked   */}
             
             <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>About Me</Nav.Link>&nbsp;
-            &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>&nbsp;
-            &nbsp;
-            &nbsp;
+            &nbsp;            &nbsp;            &nbsp;            &nbsp;            &nbsp;            &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>&nbsp;
-            &nbsp;
-            &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
             &nbsp;
             &nbsp;
             <Nav.Link href="#contact" className={activeLink === 'contact' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>Contacts</Nav.Link>&nbsp;
             &nbsp;
             &nbsp;
 &nbsp;
-
-
             </Nav>
-            
-            {/* // add social contact */}
-            <span className='navbar-text'>
-
-                <div className='social-icon'>
-                    <a href = "https://www.linkedin.com/in/linh-nguyen-361825260/"><img src = {navIcon1} alt=""></img></a>
-                    <a href = "https://github.com/LinhNguyen310"><img src = {navIcon2} alt=""></img></a>
-                    <a href = "https://www.instagram.com/linhnguy_en/"><img src = {navIcon3} alt=""></img></a>
-                </div>
-                <a download="linh'sresume.pdf" href="./assets/img/linh'sresume.pdf">
-                    <button type="button">Download Resume</button>
-                    </a>            
-                </span>
-                
         </Navbar.Collapse>
         </Container>
     </Navbar>
