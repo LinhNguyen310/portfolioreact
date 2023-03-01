@@ -9,7 +9,6 @@ import navIcon2 from '../assets/img/icon3.png';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 
 export const NavBar = () => {
-
     const [activeLink, setActiveLink] = useState('home')
     const [scrolled, seScrolled] = useState(false)
     useEffect(() =>
@@ -63,6 +62,7 @@ export const NavBar = () => {
             <Nav.Link href="#contact" className={activeLink === 'contact' ? 'active navbar-link': 'navbar-link'} onClick={() => onUpdateActiveLink('contact')}>Contacts</Nav.Link>&nbsp;
             &nbsp;
             &nbsp;
+      
 &nbsp;
             </Nav>
         </Navbar.Collapse>
