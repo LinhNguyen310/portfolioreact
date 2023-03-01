@@ -113,7 +113,7 @@ export const Banner = () => {
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <center><h1><span className="txt-rotate" dataPeriod="200" data-rotate='["Hi", "My name is Linh Nguyen","I am a Web Developer", "Web Designer" ]'><span className="wrap">{text}</span></span></h1></center>
                 
-                  <p1>I'm a computer science student at the University of Alberta who loves coding and design. I enjoy the challenges and rewards of writing code, as well as exploring the world of user interface and user experience design.</p1>
+                  <p1>I'm a student of computer science at University of Alberta. I have a deep passion for coding and designing, and I love to spend my free time tinkering with new projects and learning new programming languages. In addition to my love for technology, I also adore cats and enjoy spending time with my furry friends.</p1>
                   {/* <a href="geeksforgeeks.png" download="GFG">
                     <button type="button">Download Resume</button>
                     </a> */}
