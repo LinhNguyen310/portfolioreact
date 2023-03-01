@@ -6,6 +6,62 @@ import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Banner = () => {
+  const storageKey = 'theme-preference'
+  const onClick = () => {
+  // flip current value
+  theme.value = theme.value === 'light'
+      ? 'dark'
+      : 'light'
+  setPreference()    
+  }
+
+  const getColorPreference = () => {
+  if (localStorage.getItem(storageKey))
+      return localStorage.getItem(storageKey)
+  else
+      return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light'
+  }
+
+  const setPreference = () => {
+  localStorage.setItem(storageKey, theme.value)
+  reflectPreference()
+  }
+
+  const reflectPreference = () => {
+  document.firstElementChild
+      .setAttribute('data-theme', theme.value)
+
+  document
+      .querySelector('#theme-toggle')
+      ?.setAttribute('aria-label', theme.value)
+  }
+
+  const theme = {
+  value: getColorPreference(),
+  }
+
+  // set early so no page flashes / CSS is made aware
+  reflectPreference()
+
+  window.onload = () => {
+  // set on load so screen readers can see latest value on the button
+  reflectPreference()
+
+  // now this script can find and listen for clicks on the control
+  document
+      .querySelector('#theme-toggle')
+      .addEventListener('click', onClick)
+  }
+
+  // sync with system changes
+  window
+  .matchMedia('(prefers-color-scheme: dark)')
+  .addEventListener('change', ({matches:isDark}) => {
+      theme.value = isDark ? 'dark' : 'light'
+      setPreference()
+  })
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
@@ -56,6 +112,7 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <center><h1><span className="txt-rotate" dataPeriod="200" data-rotate='["Hi", "My name is Linh Nguyen","I am a Web Developer", "Web Designer" ]'><span className="wrap">{text}</span></span></h1></center>
+                
                   <p1>I'm a computer science student at the University of Alberta who loves coding and design. I enjoy the challenges and rewards of writing code, as well as exploring the world of user interface and user experience design.</p1>
                   {/* <a href="geeksforgeeks.png" download="GFG">
                     <button type="button">Download Resume</button>
@@ -64,7 +121,7 @@ export const Banner = () => {
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
+            {/* <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                     <div class="bottomleft">                  
@@ -76,10 +133,31 @@ export const Banner = () => {
 
 
                 </div>}
-            </TrackVisibility>
+
+            </TrackVisibility> */}
+            <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
+                <svg class="sun-and-moon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24">
+                    <mask class="moon" id="moon-mask">
+                    <rect x="0" y="0" width="100%" height="100%" fill="white" />
+                    <circle cx="24" cy="10" r="6" fill="black" />
+                    </mask>
+                    <circle class="sun" cx="12" cy="12" r="6" mask="url(#moon-mask)" fill="currentColor" />
+                    <g class="sun-beams" stroke="currentColor">
+                    <line x1="12" y1="1" x2="12" y2="3" />
+                    <line x1="12" y1="21" x2="12" y2="23" />
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                    <line x1="1" y1="12" x2="3" y2="12" />
+                    <line x1="21" y1="12" x2="23" y2="12" />
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </g>
+                </svg>
+            </button>
           </Col>
         </Row>
       </Container>
+      
     </section>
   )
 }

@@ -1,17 +1,22 @@
 /************ Custom Font ************/
 @font-face {
 	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Bold.ttf');
+	src: url('./assets/font/pixel.ttf');
 	font-weight: 700;
 }
 @font-face {
 	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Medium.ttf');
+	src: url('./assets/font/pixel.ttf');
 	font-weight: 500;
 }
 @font-face {
 	font-family: Centra;
-	src: url('./assets/font/CentraNo2-Book.ttf');
+	src: url('./assets/font/pixel.ttf');
+	font-weight: 400;
+}
+@font-face {
+	font-family: pixel;
+	src: url('./assets/font/pixel.ttf');
 	font-weight: 400;
 }
 
@@ -97,13 +102,29 @@ p.danger {
 }
 /************Theme Changer***********/
 @import "https://unpkg.com/open-props/easings.min.css";
+.sun-and-moon{
+  position: absolute;
+  left: 400px;
+  top: 300px;
+  height: 50px;
+  width: 50px;
+  border: 0.2px solid #fff ;
+  border-radius:0.7rem;
+  box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 42px #0fa,
+            0 0 82px #0fa,
+            ; 
 
+}
 .sun-and-moon > :is(.moon, .sun, .sun-beams) {
   transform-origin: center;
+  
 }
 
 .sun-and-moon > :is(.moon, .sun) {
   fill: var(--icon-fill);
+  color: white;
 }
 
 .theme-toggle:is(:hover, :focus-visible) > .sun-and-moon > :is(.moon, .sun) {
@@ -149,6 +170,7 @@ p.danger {
 
   .sun-and-moon .moon > circle {
     transition: transform .25s var(--ease-out-5);
+
   }
 
   @supports (cx: 1) {
@@ -181,9 +203,20 @@ nav.navbar {
   width: 100%;
   top: 0;
   z-index: 9999;
+  background-image: url('./assets/img/space.png');
+  transition:  0.32s ease-in-out;
+}
+[data-theme="light"] nav.navbar {
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  background-image: url('./assets/img/morning.png');
   transition:  0.32s ease-in-out;
 }
 nav.navbar.scrolled {
+
   padding: 0px 0;
   background-color: #121212;
 }
@@ -191,11 +224,12 @@ nav.navbar a.navbar-brand {
     width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
-  font-weight: 400;
+  width: 100px;
+  font-weight: 500;
   color: #fff !important;
-  letter-spacing: 0.8px;
-  padding: 0 25px;
-  font-size: 18px;
+  letter-spacing: 1px;
+  word-spacing: 20px;
+  font-size: 40px;
   opacity: 0.75;
 }
 nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
@@ -203,6 +237,7 @@ nav.navbar .navbar-nav a.nav-link.navbar-link.active {
     opacity: 1;
 }
 span.navbar-text {
+    word-spacing: auto;
     display: flex;
     align-items: center;
     
@@ -298,8 +333,8 @@ nav.navbar .navbar-toggler:focus {
     box-shadow: none;
 }
 nav.navbar .navbar-toggler-icon {
-  width: 24px;
-  height: 17px;
+  width: 50px;
+  height: 50px;
   background-image: none;
   position: relative;
   border-bottom: 2px solid #fff;
@@ -311,9 +346,9 @@ nav.navbar .navbar-toggler-icon:focus {
 }
 nav.navbar .navbar-toggler-icon:after,
 nav.navbar .navbar-toggler-icon:before {
-	width: 24px;
+	width: 50px;
 	position: absolute;
-	height: 2px;
+	height: 50px;
 	background-color: #fff;
 	top: 0;
 	left: 0;
@@ -340,9 +375,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Banner Css ************/
 .banner {
+  position: center;
+  margin-top: 10;
+  padding: 350px 0 200px 10px;
+  background-image: url('./assets/img/space.png');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+[data-theme="light"] .banner {
+  position: center;
   margin-top: 0;
-  padding: 260px 0 100px 0;
-  background-image: url('./assets/img/space.jpg');
+  padding: 350px 0 200px 10px;
+  background-image: url('./assets/img/morning.png');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -371,13 +416,33 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-bottom: 16px;
   display: inline-block;
 }
+
 .banner h1 {
+  position: center;
+  font-family: 'pixel', sans-serif !important;
+                                              
+  color: white;
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+}
+[data-theme="light"].banner h1 {
+  position: center;
+  font-family: 'pixel', sans-serif !important;
+  color: #000;
+  background-color: black;
   font-size: 65px;
   font-weight: 700;
   letter-spacing: 0.8px;
 }
 .banner p1 {
-  color: #B8B8B8;
+  font-family: 'pixel', sans-serif !important;
+  font-smooth: never;
+  -webkit-font-smoothing : none;
+  position: absolute;
+  right: 30px;
+  width: 400px;
+  color: white;
   font-size: 30px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -389,6 +454,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   0 0 92px #0fa,
   0 0 102px #0fa,
   0 0 151px #0fa;
+}
+[data-theme="light"] .banner p1 {
+  font-family: 'pixel', sans-serif !important;
+  color: black;
+  font-size: 30px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+  text-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 21px #fff,
+  0 0 42px pink,
+  0 0 82px pink,
+  0 0 92px pink,
+  0 0 102px pink,
+  0 0 151px  pink;
 }
 /* .banner button {
   bottom: 250px;
@@ -429,12 +511,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner img:hover {
   position: relative;
   right: 10px;
-  animation: xAxis 3s infinite ease-in;
+  animation: spin 10s infinite ease-in;
 }
-.banner img::after {
+
+/* .banner img::after {
   position: relative;
   right: 10px;
   animation: yAxis 3s infinite ease-out;
+} */
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
 }
 
 @keyframes yAxis {
