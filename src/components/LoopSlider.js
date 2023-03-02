@@ -17,7 +17,7 @@ import cpl from "../assets/img/c++.png";
 import keras from "../assets/img/keras.png";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import colorSharp from "../assets/img/color-sharp.png"
+import arrow1 from "../assets/img/arrow1.png"
 
 export const Sliders = () => {
   const responsive = {
@@ -43,88 +43,88 @@ export const Sliders = () => {
   return (
     <section className="slider" id="sliders" >
       <ul className="slider-bx wow zoomIn" >
-          <Carousel responsive={responsive} infinite={true} className="left carousel-control slider-slider">
-              <ul className="item">
+          <Carousel responsive={responsive} infinite={true} arrows={false} className="left carousel-control slider-slider">
+              <ul className="item" title ="trello">
                   <img src={trello}      
 
                   alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="Tensorflow">
                   <img src={tf} 
 
                   alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="SQL">
                   <img src={sql}
               
                    alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="Python">
                   <img src={python}
 
                    alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="OpenCV">
                   <img src={opencv}
 
                    alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="MongoDB">
                   <img src={mongodb}
 
                    alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="JavaScript">
                   <img src={js}
 
                    alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="Java">
                   <img src={java} 
 
                   alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="HTML">
                   <img src={html} 
 
                   alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="Github">
                   <img src={github} 
 
                   alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="Flutter">
                   <img src={flutter} 
 
                   alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="Figma">
                   <img src={figma} 
 
                   alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="Dart">
                   <img src={dart} 
 
                   alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="CSS">
                   <img src={css} 
 
                   alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="C">
                   <img src={c} 
 
                   alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="C++">
                   <img src={cpl} 
 
                   alt="Image" />
               </ul>
-              <ul className="item">
+              <ul className="item"title ="Keras">
                   <img src={keras} 
                   alt="Image" />
               </ul>
