@@ -6,21 +6,23 @@ import TrackVisibility from 'react-on-screen';
 export const Contact = () => {
   return (
     <section className="contact" id="contacts">
-      <Container>
-        <Row className="align-items-center">
-          <Col size={12} md={6}>
-          </Col>
-          <Col size={12} md={6}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <h2>Get In Touch</h2>
- {/* // add social contact */}
-              </div>}
-            </TrackVisibility>
-          </Col>
-        </Row>
-      </Container>
+    <div className="contact-bx wow slideInUp">
+      <h2>Get In Touch</h2>
+      <div class="content">
+        <div class="css">Email Me</div>
+        <div class="css">Email Me</div>
+        <div class="css">Email Me</div>
+        <div class="css">Email Me</div>
+        <div class="css">Email Me</div>
+        <div class="css">Email Me</div>
+        <div class="css">Email Me</div>
+        <div class="css">Email Me</div>
+        <div class="css">Email Me</div>
+        <div class="css">Email Me</div>
+      </div>  
+      
+    </div>
+
     </section>
   )
 };

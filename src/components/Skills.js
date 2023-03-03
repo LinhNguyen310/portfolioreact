@@ -3,9 +3,7 @@ import meter2 from "../assets/img/meter2.png";
 import meter3 from "../assets/img/meter1.png";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.png";
-import arrow2 from "../assets/img/arrow2.png";
-import colorSharp from "../assets/img/color-sharp.png"
+
 
 export const Skills = () => {
   const responsive = {
