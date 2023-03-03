@@ -8,13 +8,13 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { Sliders } from "./components/LoopSlider";
-import { NeonCursor } from "./components/Cursor";
+// import { NeonCursor } from "./components/Cursor";
 import React from "react";
 
 function App() {
   return (
     <div className="app" >
-      <NeonCursor />
+      {/* <NeonCursor /> */}
       <NavBar />
       <Banner />
       <Skills />
