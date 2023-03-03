@@ -10,12 +10,11 @@ import { Footer } from "./components/Footer";
 import { Sliders } from "./components/LoopSlider";
 import { NeonCursor } from "./components/Cursor";
 import React from "react";
-import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
 
 function App() {
   return (
     <div className="app" >
-      <neonCursor />
+      <NeonCursor />
       <NavBar />
       <Banner />
       <Skills />
