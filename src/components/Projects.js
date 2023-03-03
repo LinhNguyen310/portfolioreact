@@ -1,8 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import projImg1 from "../assets/img/project1.jpg";
-import projImg2 from "../assets/img/project2.png";
-import projImg3 from "../assets/img/project3.png";
+import projImg2 from "../assets/img/project2.jpg";
+import projImg3 from "../assets/img/project3.gif";
 import projImg4 from "../assets/img/project4.png";
 import projImg5 from "../assets/img/project5.png";
 
@@ -15,23 +15,45 @@ export const Projects = () => {
   const projects = [
     {
       title: "ASlingo",
-      imgUrl: projImg1
-    },
+      imgUrl: projImg1}
+    // },
+    // {
+    //   title: "FitAI",
+    //   imgUrl: projImg2
+    // },
+    // {
+    //   title: "Online White Board",
+    //   imgUrl: projImg3
+    // },
+    // {
+    //   title: "Image Classfier",
+    //   imgUrl: projImg4
+    // },
+    // {
+    //   title: "Simple Chat Room",
+    //   imgUrl: projImg5
+    // }
+  ];
+  const projects2 = [
     {
       title: "FitAI",
-      imgUrl: projImg1
-    },
+      imgUrl: projImg2
+    }
+
+  ];  const projects3 = [
     {
       title: "Online White Board",
-      imgUrl: projImg1
-    },
+      imgUrl: projImg3
+    }
+  ];  const projects4 = [
     {
-      title: "Online White Board",
-      imgUrl: projImg1
-    },
+      title: "Image Classfier",
+      imgUrl: projImg4
+    }
+  ];  const projects5 = [
     {
       title: "Simple Chat Room",
-      imgUrl: projImg1
+      imgUrl: projImg5
     }
   ];
 
@@ -56,7 +78,7 @@ export const Projects = () => {
                       <Nav.Link eventKey="third">Online White Board</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="fourth">Online White Board</Nav.Link>
+                      <Nav.Link eventKey="fourth">Image Classfier</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="fifth">Simple Chat Room</Nav.Link>
@@ -80,7 +102,7 @@ export const Projects = () => {
                     <Tab.Pane eventKey="second">
                     <Row>
                         {
-                          projects.map((project, index) => {
+                          projects2.map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}
@@ -93,7 +115,33 @@ export const Projects = () => {
                     <Tab.Pane eventKey="third">
                     <Row>
                         {
-                          projects.map((project, index) => {
+                          projects3.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>                    </Tab.Pane>
+                      <Tab.Pane eventKey="fourth">
+                    <Row>
+                        {
+                          projects4.map((project, index) => {
+                            return (
+                              <ProjectCard
+                                key={index}
+                                {...project}
+                                />
+                            )
+                          })
+                        }
+                      </Row>                    </Tab.Pane>
+                      <Tab.Pane eventKey="fifth">
+                    <Row>
+                        {
+                          projects5.map((project, index) => {
                             return (
                               <ProjectCard
                                 key={index}

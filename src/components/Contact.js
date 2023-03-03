@@ -8,20 +8,14 @@ export const Contact = () => {
     <section className="contact" id="contacts">
     <div className="contact-bx wow slideInUp">
       <h2>Get In Touch</h2>
-      <div class="content">
-        <div class="css">Email Me</div>
-        <div class="css">Email Me</div>
-        <div class="css">Email Me</div>
-        <div class="css">Email Me</div>
-        <div class="css">Email Me</div>
-        <div class="css">Email Me</div>
-        <div class="css">Email Me</div>
-        <div class="css">Email Me</div>
-        <div class="css">Email Me</div>
-        <div class="css">Email Me</div>
-      </div>  
-      
-    </div>
+
+
+      <span className='css'>
+          <a href="mailto:lhnguye1@ualberta.ca">
+              Email Me
+          </a>            
+      </span>
+      </div>
 
     </section>
   )

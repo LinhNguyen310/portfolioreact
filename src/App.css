@@ -430,10 +430,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 700;
   letter-spacing: 0.8px;
 }
-[data-theme="light"].banner h1 {
+[data-theme="light"] .banner h1 {
   position: center;
   font-family: 'pixel', sans-serif !important;
-  color: #000;
+  color: black;
   font-size: 65px;
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -627,6 +627,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 50%;
   margin: 0 auto 15px auto;
 }
+.skill-slider .item h5 {
+  font-size: 30px;
+}
 /* .background-image-left {
   top: 28%;
   position: absolute;
@@ -654,12 +657,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .slider-slider .item img {
   width: 100px;
   height: 100px;
-
   animation-iteration-count: infinite;
   overflow: hidden;
-
   animation:scroll 15s linear infinite;
-
 }
 .slider-slider .item img:hover{
   transform: scale(1.15); 
@@ -718,7 +718,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   0 0 102px #0fa,
   0 0 151px #0fa;
   color: #B8B8B8;
-  font-size: 18px;
+  font-size: 30px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+}
+[data-theme="light"] .project p {
+  text-shadow:
+  0 0 42px #0fa,
+  0 0 82px #0fa,
+  0 0 92px #0fa,
+  0 0 102px #0fa,
+  0 0 151px #0fa;
+  color: black;
+  font-size: 30px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin: 14px auto 30px auto;
@@ -738,15 +753,31 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   clear: left;
   width: 33.33333%;
 }
+[data-theme="light"] .project .nav.nav-pills .nav-link {
+  float: left;
+  clear: left;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 17px 0;
+  color: black;
+  width: 100%;
+  font-size: 30px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0;
+}
 .project .nav.nav-pills .nav-link {
   float: left;
   clear: left;
   background-color: transparent;
   border-radius: 0;
   padding: 17px 0;
-  color: #fff;
+  color: white;
   width: 100%;
-  font-size: 17px;
+  font-size: 30px;
   letter-spacing: 0.8px;
   font-weight: 500;
   position: relative;
@@ -901,13 +932,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 100%;
   z-index: 2;
 } */
-.content{
-  background-color: blue;
-  padding-top: 20px;
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-}
 .css {
   font-family: 'pixel', cursive;
   position: absolute;
@@ -919,8 +943,70 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   text-shadow: 0 0 10px #000 a;
   transition: all 0.5s;
 }
-
-@keyframes color {
+.css a{
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'pixel', cursive;
+  width: 100px;
+  position: absolute;
+  bottom: 1px;
+  left: 50px;
+  padding-top: 30px;
+  font-size: 90px;
+  animation: colorLight 3s infinite linear;
+  text-shadow: 0 0 10px #000 a;
+  transition: all 0.5s;
+}
+[data-theme="light"] .css a{
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'pixel', cursive;
+  width: 100px;
+  position: absolute;
+  bottom: 1px;
+  left: 50px;
+  padding-top: 30px;
+  font-size: 90px;
+  animation: colorDark 3s infinite linear;
+  text-shadow: 0 0 10px #000 a;
+  transition: all 0.5s;
+}
+@keyframes colorDark {
+  0% {
+    color: rgb(66, 41, 41);
+ }
+  10% {
+    color: rgb(38, 34, 51);
+ }
+  20% {
+    color: #241844;
+ }
+  30% {
+    color: #0d2108;
+ }
+  40% {
+    color: #4e141b;
+ }
+  50% {
+    color: #431010;
+ }
+  60% {
+    color: #6b8bb6;
+ }
+  70% {
+    color: #584c8b;
+ }
+  80% {
+    color: #742488;
+ }
+  90% {
+    color: #af5c8e;
+ }
+  100% {
+    color: #b34d4d;
+ }
+}
+@keyframes colorLight {
   0% {
     color: #ef8f8f;
  }
@@ -1124,14 +1210,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   0 0 151px #0fa;
 
 }
-.footer-text button:hover::before {
-  transform: scale(1);
+span::before { 
+  display: inline-block;
+  content: attr(data-content);
+  color: midnightblue;
+  transform: translateX(100%);
+  transition: transform 275ms ease;
+  text-decoration: underline;
 }
-.footer-text button {
-  width: 40%;
-  z-index: 1;
-  transition: 0.3s ease-in-out;
+.footer-text button:hover span {
+  transform: translateX(0);
 }
+.footer-text button:hover span::before {
+  transform: translateX(0);
+}
+
 .footer-text button:hover {
 filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
 }
