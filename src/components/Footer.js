@@ -19,7 +19,7 @@ export const Footer = () => {
               <a href = "https://www.instagram.com/linhnguy_en/"><img src = {navIcon3} alt=""></img></a>
           </div>
           <span className='footer-text'>
-          <a href="https://drive.google.com/file/d/1kbH4ES18K5ALOAOW9wl0AkiF762G2UhO/view?usp=sharing">
+          <a href="https://drive.google.com/file/d/1eexl5Omw4Yvgzk0nlXxw2XqtlONCOKEX/view?usp=sharing">
               <button type="button">
                 Download Resume
                 </button>
